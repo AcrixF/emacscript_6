@@ -1,0 +1,14 @@
+var funcs = [];
+var object = {
+    a : true,
+    b : true,
+    c : true
+};
+
+for( let key in object ) {
+    funcs.push( function () {
+        console.log( key );
+    });
+}
+
+funcs.forEach( func => func() ) ;
